@@ -1,7 +1,6 @@
 package controllers
 
 import (
-	"fmt"
 	models "groupie-tracker/model"
 	"html/template"
 	"net/http"
@@ -16,7 +15,7 @@ func ArtistHandler(w http.ResponseWriter, r *http.Request) {
 	// Récupère les données de l'artiste
 	artist, err := models.GetArtistByID(idString)
 	if err != nil {
-		http.Error(w, "Erreur lors de la récupération des artistes", http.StatusInternalServerError)
+		http.Error(w, "Erreur lors de la récupération de l'artiste", http.StatusInternalServerError)
 		return
 	}
 	artist.DataConcert, err = models.GetData(idString)
@@ -36,8 +35,6 @@ func ArtistHandler(w http.ResponseWriter, r *http.Request) {
 	// Execute
 	err = tmpl.Execute(w, artist)
 	if err != nil {
-		fmt.Println("Erreur d'exécution du modèle:", err)
-		fmt.Println(err.Error())
 		http.Error(w, "Erreur d'exécution du modèle", http.StatusInternalServerError)
 		return
 	}

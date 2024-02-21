@@ -4,6 +4,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const queryValue = urlParams.get('q');
 var firstSearch = true
 
+// Récupération de tt les éléments utiles
 var searchtext = document.getElementById('artist-search');
 var range1 = document.getElementById('range');
 var range2 = document.getElementById('range2');
@@ -18,6 +19,7 @@ texteBar[0].textContent = "Tous les artistes";
 texteDate1[0].textContent = range1.value;
 texteDate2[0].textContent = range2.value;
 
+//On trie par ordre alphabétique
 let artists = Array.from(document.querySelectorAll('.cards'));
 const artistList = document.querySelector('.cardsList');
 artists.sort((a, b) => {
@@ -29,6 +31,8 @@ artists.forEach(function(artist) {
     artistList.appendChild(artist);
 });
 
+
+//Si la recherche provient de la page d'accueil
 if (queryValue != '' && firstSearch) {
     firstSearch = false
     searchtext.value = queryValue
@@ -78,7 +82,7 @@ triNB.addEventListener('change',function(){
     Filtered();
 });
 
-function Filtered() {
+function Filtered() { // Fonction qui trie/filtre les artistes en fonction des values des input
     var text = searchtext.value.toLowerCase();
     for (var i = 0; i < artists.length; i++) {
         var name = artists[i].querySelector('.name').textContent.toLowerCase();
