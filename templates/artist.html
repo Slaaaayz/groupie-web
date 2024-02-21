@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Symphony Artist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.8" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+</head>
+
+<body>
+    <script src="/assets/wallpaper.js"></script>
+    <div class="sideNav">
+        <br><br>
+        <div class="containerNavLogo">
+            <img src="../assets/img/image 9.png" alt="logo">
+        </div>
+        <div class="containerNavText">
+            <a class="textNav" class="firstText" href="/accueil">Accueil</a>
+            <a class="textNav" href="/search">Rechercher</a>
+            <a class="textNav" href="/billboard">Billboard</a>
+            <a style="margin-top: 20%;" class="textNav" href="/game">Play</a>
+            <a class="settings" href="/settings"><i style="font-size: 40px;" class="material-icons roue">settings</i></a>
+        </div>
+        <div class="containerNavFooter">
+            <p>Symphony © 2024</p>
+        </div>
+    </div>
+    <div class="containerCards4">
+        <div class="containerArtist">
+            <img src={{.Image}} alt="artist profile picture">
+            <div class="artistName">
+                {{.Name}}
+            </div>
+        
+        <div class="infoArtist">
+            <div class="dateArtist">
+                <div class="creaDate">
+                    <div class="labelDate">
+                        Date de début
+                    </div>
+                    <div class="date">
+                        {{.CreationDate}}
+                    </div>
+                </div>
+                <div class="firstDate">
+                    <div class="labelDate">
+                        Date du 1er album
+                    </div>
+                    <div class="date">
+                        {{.FirstAlbum}}
+                    </div>
+                </div>
+            </div>
+            <div class="memberArtist">
+                <div class="titleMember">
+                    Membres
+                </div>
+                {{range .Members}}
+                <div class="titleMember">
+                </div>
+                <div class="member">
+                    {{.}}
+                </div>
+                {{end}}
+            </div>
+        </div>
+        </div>
+        <div class="spotifyArtist">
+<iframe style="border-radius:15px" src="https://open.spotify.com/embed/artist/{{ .URL}}?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <div class="mapArtist">
+            {{ range $key, $values := .DataConcert.DatesLocations }}
+            {{ range $value := $values }}
+                <div class="mapCard">
+                    <div class="mapPlace">
+                        {{$key}}
+                    </div>
+                    <div class="map">
+                        <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q={{ $key }}&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/population/">Population calculator map</a></iframe>
+                    </div>
+                    <div class="mapDate">
+                        {{$value}}
+                    </div>
+                </div>
+            {{ end }}
+        {{ end }} 
+        </div>
+    </div>
+    
+</body>

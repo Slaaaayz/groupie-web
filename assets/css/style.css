@@ -1,0 +1,940 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap');
+
+*{
+    font-family: "Radio Canada";
+}
+
+body {
+    background-image: url('../img/wp6.webp');
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Radio Canada', sans-serif;
+    margin: 0;
+}
+
+a:link {color: rgba(255, 255, 255, 0.80);}a:visited {color: rgba(255, 255, 255, 0.80);}a:hover {color: rgba(255, 255, 255, 0.80);}a:active {color: rgba(255, 255, 255, 0.80);}a{text-decoration: none;}
+
+.sideNav {
+    position:absolute;
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(25px);
+    width: 271px;
+    height: 100vh;
+    flex-shrink: 0;
+    margin:0;
+}
+
+.containerNavLogo {
+    position: relative;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    width: 182px;
+    height: 186px;
+    border-radius: 150px;
+}
+.containerNavLogo img {
+    width: 80%;
+
+}
+
+
+
+
+.containerNavText {
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    color: #FFFF;
+    text-align: center;
+}
+
+.containerNavText .textNav {
+    font-size: 30px;
+    margin-bottom: 3vh;
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(137deg, rgba(255,255,255,0.17) 0%, rgba(255,255,255,0) 100%);
+    background: -webkit-linear-gradient(137deg, rgba(255,255,255,0.17) 0%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(137deg, rgba(255,255,255,0.17) 0%, rgba(255,255,255,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+    padding: 0 10px;
+    border-radius: 50px;
+    transition: all 0.2s;
+}
+
+.containerNavText .textNav:hover{
+background-color: rgba(255,255,255,0.17); 
+}
+
+.containerNavText .settings .roue{
+    bottom: 0;
+    margin-top: 11vh;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 150px;
+    background: none;
+    margin-left: auto;
+    margin-right: auto;
+    transition-duration: 700ms;
+
+
+}
+
+
+.roue:hover {
+    transform: rotate(90deg);
+}
+
+.containerNavFooter {
+    bottom: 0;
+    width: fit-content;
+    color: rgba(255, 255, 255, 0.80);
+    font-family: "Radio Canada";
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.searchbarContainer {
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.30);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(25px);
+    width: 60%;
+    height: 110px;
+    margin-left: 30vw;
+    margin-top: 4vh;
+    transition: all .2s;
+}
+
+.searchbarContainer:hover{
+    background: rgba(255, 255, 255, 0.40);
+}
+
+.searchbarContainer .searchbarText {
+    position: absolute;
+    text-align: center;
+    height: 110px;
+    line-height: 110px;
+    padding-left: 60px;
+    color: rgba(255, 255, 255, 0.60);
+    width: auto;
+    font-family: "Radio Canada";
+    font-size: 30px;
+}
+
+.searchbarContainerGame {
+    align-items: center;
+    text-align: center;
+    border-radius: 50px;
+
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(25px);
+    width: 40%;
+    height: 50px;
+    margin: 0 auto;
+
+    transition: all .2s;
+}
+
+.searchbarContainerGame:hover{
+    background: rgba(255, 255, 255, 0.40);
+}
+
+.searchbarContainerGame .searchbarTextGame {
+    text-align: center;
+    height: 50px;
+
+    padding-left: 40px;
+    color: rgba(255, 255, 255, 0.60);
+    width: auto;
+    font-family: "Radio Canada";
+    font-size: 30px;
+}
+
+::placeholder{
+    color: rgba(255, 255, 255, 0.60);
+}
+.searchbarContainerGame .searchbarTextGame .input2{
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    background: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-family: "Radio Canada";
+    font-size: 25px;
+    width: 100%;
+}
+
+.searchbarContainer .searchbar {
+    display: block;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: none!important;
+}
+
+.searchIcon {
+    position: absolute;
+}
+
+.containerCards2::-webkit-scrollbar{margin-left: 60px; height:10%;width:6px;background: rgba(255, 255, 255, 0.0); border-radius: 25px;}
+.containerCards2::-webkit-scrollbar-thumb{margin-left: 60px;height: 60px; background: rgba(255, 255, 255, 0.0); border-radius: 25px;}
+
+.containerCards {
+    margin-left: 30vw;
+    margin-top: 25vh;
+    width: 60%;
+    height: 70vh;
+    position: absolute;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.30);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(25px);
+    text-align: center;
+}
+
+.containerCards2 {
+    margin-left: 30vw;
+    margin-top: 30vh;
+    width: 60%;
+    height: 65vh;
+    overflow-y: scroll;
+    position: absolute;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.30);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(25px);
+    text-align: center;
+}
+
+.containerCards3 {
+    margin-left: 30vw;
+    margin-top: 7vh;
+    width: 60%;
+    height: 83vh;
+    position: absolute;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.30);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(25px);
+    text-align: center;
+    color: #FFFF;
+}
+
+.containerCards3 .billBoard {
+    padding: 0;
+    margin-top: 5px;
+    width: 96%;
+    height: 90%;
+    border-radius: 25px;
+    border: none;
+    animation-name: shadow;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+}
+
+.containerCards3 .titlePlay {
+    align-items: center;
+    text-align: center;
+    margin-top: -25px;
+    color: #FFFF;
+    font-size: 40px;
+    background: #282880;
+    animation-name: shadow;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+    backdrop-filter: blur(75px);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3px 25px;
+    border-radius: 25px;
+    border: none;
+}
+
+.containerCards3 .titlePlayGame {
+    align-items: center;
+    text-align: center;
+    margin-top: -25px;
+    color: #ffffff;
+    font-size: 40px;
+    background: rgba(255, 255, 255, 0.3);
+
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3px 25px;
+    border-radius: 25px;
+    border: none;
+}
+
+.containerCards3 .titlePlay2 {
+    align-items: center;
+    text-align: center;
+    margin-top: -25px;
+    color: #FFFF;
+    font-size: 40px;
+    background: rgba(255, 255, 255, 0.30);
+    backdrop-filter: blur(75px);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3px 25px;
+    border-radius: 25px;
+    border: none;
+}
+
+@keyframes shadow {
+    0% {
+        -webkit-box-shadow: 0px 0px 34px 8px rgba(40,40,128,0); 
+        box-shadow: 0px 0px 34px 8px rgba(40,40,128,0);
+    }
+    /* Adding a step in the middle */
+    50% {
+        -webkit-box-shadow: 0px 0px 34px 8px rgba(40,40,128,1); 
+        box-shadow: 0px 0px 34px 8px rgba(40,40,128,1);
+    }
+    100% {
+        -webkit-box-shadow: 0px 0px 34px 8px rgba(40,40,128,0); 
+        box-shadow: 0px 0px 34px 8px rgba(40,40,128,0);
+    }
+  }
+
+.cardsTitle {
+    margin-top: 10px;
+    padding: 7px 35px;
+    font-size: 26px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #ffffffe7;
+    background: rgba(255, 255, 255, 0.20);
+    border-radius: 25px;
+}
+.cardsList{
+        margin-top: 20px;
+        position: relative;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        justify-content: center;
+}
+
+.cardsList .cards{
+    margin: 15px 25px;
+    background: rgba(255, 255, 255, 0.20);
+    width: 140px;
+    height: 140px;
+    text-align: center;
+    align-items: center;
+    border-radius:  35px;
+    transition: all 0.2s;
+}
+
+.cards:hover{
+    filter: saturate(2);
+    background: rgba(255, 255, 255, 0.10);
+    font-size: 110%;
+
+}
+
+.cards .cardsImg img{
+    border-radius: 25px;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    z-index: -999;
+}
+
+.cards .cardsElementTitle{  
+    margin-top: -15px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+}
+
+.cards .cardsElementTitle a{
+    width: fit-content;
+    padding: 2px 5px;
+    background: rgba(0, 0, 0, 0.60);
+    z-index: 9999;
+    border-radius: 25px;
+     display: inline;   
+     -webkit-box-decoration-break: clone;
+     -ms-box-decoration-break: clone;
+     -o-box-decoration-break: clone;
+     box-decoration-break: clone;
+}
+
+.loupe {
+    z-index: 9999;
+    position: absolute;
+    margin-top: -90px;
+    margin-left: 80vh;
+    background: rgba(255, 255, 255, 0.10);
+    width: 65px;
+    border-radius: 25px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(25px);
+}
+
+.billBoard {
+    align-self: center;
+    margin-top: 5%;
+}
+
+
+.containerCards4 {
+    margin-left: 30vw;
+    margin-top: 3vh;
+    width: 60%;
+    height: 94vh;
+    position: absolute;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.30);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(25px);
+    text-align: center;
+}
+.containerArtist {
+    width: fit-content;
+    margin-left: 2%;
+    margin-top: 3%;
+
+    padding: 0 25px;
+}
+.containerArtist img {
+    width: 150px;
+    height: 150px;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.containerArtist .artistName {
+    max-width: 170px;
+    width: fit-content;
+    color: rgba(255, 255, 255, 0.80);
+    text-align: center;
+    font-family: "Radio Canada";
+    font-size: 22px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 15px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.30);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(25px);
+}
+
+.infoArtist .dateArtist {
+    width: fit-content;
+    margin-top: 1.5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dateArtist .creaDate {
+    color: rgba(255, 255, 255, 0.80);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.creaDate .labelDate {
+    font-size: 15px;
+}
+
+
+
+.dateArtist .firstDate {
+    color: rgba(255, 255, 255, 0.80);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 18px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.firstDate .labelDate {
+    font-size: 15px;
+        margin-left: auto;
+    margin-right: auto;
+}
+
+.date {
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.30);
+    backdrop-filter: blur(25px);
+    padding: 2px 10px;
+    font-size: 18px;
+}
+
+.memberArtist {
+    background: rgba(168, 142, 142, 0.2);
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    color: #fff;
+    border-radius: 15px;
+    height: 220px;
+    padding-bottom: 15px;
+    margin-top: 10px;
+}
+.memberArtist .titleMember {
+    position: sticky;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(25px);
+    font-size: 22px;
+    width: fit-content;
+    padding: 2px 15px;
+    margin: 10px auto;
+}
+.memberArtist .member {
+color: #FFFF;
+margin: 2px auto;
+}
+.memberArtist::-webkit-scrollbar{width:3px;background: rgba(255, 255, 255, 0.0); border-radius: 25px;}
+.memberArtist::-webkit-scrollbar-thumb{background: rgba(255, 255, 255, 0.3); border-radius: 25px;}
+
+
+
+.spotifyArtist {
+    position: absolute;
+    margin-top: -600px;
+    margin-left: 30%;
+    width: 67%;
+    height: 20px;
+}
+
+.mapArtist {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.10);
+    z-index: 9999;
+    width: 64%;
+    height: 220px;
+    margin-top: -230px;
+    margin-left: 30%;
+    border-radius: 15px;
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    padding: 10px 15px;
+}
+
+.mapArtist::-webkit-scrollbar{width:4px;background: rgba(255, 255, 255, 0.1); border-radius: 25px;}
+.mapArtist::-webkit-scrollbar-thumb{background: rgba(255, 255, 255, 0.3); border-radius: 25px;}
+
+
+.mapCard {
+    background: rgba(255, 255, 255, 0.10);
+    border-radius: 25px;
+    width: fit-content;
+    padding: 10px 25px;
+    margin:3px 10px ;
+    height: fit-content;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.mapCard .mapPlace {
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(25px);
+    padding: 2px 10px;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.mapCard .mapDate {
+    color: #fff;
+    font-size: 15px;
+} 
+.map iframe {
+    border-radius: 25px;
+    width: 100px;
+    height: 100px;
+
+}
+
+
+.containerWp {
+    margin-top: 30px;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.20);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    margin-right: 70px;
+    margin-left: 70px;
+    align-items: center;
+    text-align: center;
+    overflow-y: hidden;
+}
+
+.containerWp .wp img{
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 285px;
+    height: 162px;
+    margin: 0 20px;
+    border-radius: 25px;
+    transition: all 0.2s;
+}
+
+.containerWp .wp img:hover {
+    cursor: pointer;
+    box-shadow: 0px 4px 17.7px 6px rgba(0, 0, 0, 0.70);
+    transform: scale(1.05);
+}
+
+.containerWp::-webkit-scrollbar{padding-left: 200px; padding-right: 200px;height:7px;background: rgba(255, 255, 255, 0.0); border-radius: 25px;}
+.containerWp::-webkit-scrollbar-thumb{background: rgba(255, 255, 255, 0.3); border-radius: 50px;}
+
+.containerCredits {
+    margin-top: 5%;
+    background: rgba(255, 255, 255, 0.20);
+    height: 35%;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 100px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    border-radius: 25px;
+}
+
+.containerCredits .creditsTitle {
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.containerCredits .creditsList {
+    font-size: 20px;
+}
+
+
+
+
+
+
+.searchbarContainer {
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.30);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(25px);
+    width: 60%;
+    height: 110px;
+    margin-left: 30vw;
+    margin-top: 4vh;
+    transition: all .2s;
+}
+
+.searchbarContainer:hover{
+    background: rgba(255, 255, 255, 0.40);
+}
+
+.searchbarContainer .searchbarText {
+    position: absolute;
+    text-align: center;
+    height: 110px;
+    line-height: 110px;
+    padding-left: 60px;
+    color: rgba(255, 255, 255, 0.60);
+    width: auto;
+    font-family: "Radio Canada";
+    font-size: 30px;
+}
+
+
+::placeholder{
+    color: rgba(255, 255, 255, 0.60);
+}
+.searchbarContainer .searchbarText .input1{
+    position: relative;
+    height: 110px;
+    line-height: 110px;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.60);
+    font-family: "Radio Canada";
+    font-size: 30px;
+    width: 200%;
+}
+.searchbarContainer .searchbar {
+    display: block;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: none!important;
+}
+
+
+.chrono {
+    margin-top: 50px;
+    color: #fff;
+    font-size: 35px;
+    font-family: "Radio Canada";
+}
+
+.containerIndice {
+    font-family: "Radio Canada";
+    width: 65%;
+    height: 50%;
+    background-color: #ffffff11;
+    backdrop-filter: blur(25px);
+    border-radius: 25px;
+    margin: 30px auto;
+}
+
+.containerIndice .titleIndice {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-bottom: 30px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.textIndice p {
+font-size: 20px;
+color: #fff;
+align-items: center;
+text-align: center;
+justify-content: center;
+margin-top: 15%;
+}
+
+.containerIndice img {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+.artistImage {
+    max-width: 200px;
+    height: auto;
+    margin-top: 20px;
+}
+
+
+.containerRes {
+    font-family: "Radio Canada";
+    width: 65%;
+    height: 65%;
+    background-color: #ffffff11;
+    backdrop-filter: blur(25px);
+    border-radius: 25px;
+    margin: 7% auto;
+    margin-bottom: 20px !important;
+    padding-top: 5px;
+}
+
+.gameResult {
+    font-size: 40px;
+}
+
+.answer {
+    font-size: 30px;
+}
+
+.artistId {
+    font-size: 25px;
+    background-color: #ffffff35;
+    padding: 3px 10px;
+    border-radius: 25px;
+    color: #fff !important;
+}
+
+.artistImage {
+    position: relative;
+    margin-top: 15px;
+    width: 100px;
+    height: 100px;
+}
+
+.artistId2 {
+    font-size: 35px;
+    background-color: #ffffff35;
+    padding: 3px 10px;
+    border-radius: 25px;
+    color: #fff !important;
+    margin: 0;
+}
+
+#imgArtiste {
+    animation-name: progBlur;
+    animation-duration: 10000ms;
+    animation-timing-function: linear; 
+}
+
+@keyframes progBlur {
+    0% {
+        filter: blur(10px);
+    }
+
+    50% {
+        filter: blur(5px);
+    }
+    80% {
+        filter: blur(0px);
+    }
+  }
+
+
+  .valider {
+    font-size: 20px;
+    background-color: #ffffff35;
+    padding: 3px 10px;
+    border-radius: 25px;
+    color: #fff !important;
+    border: none;
+    margin-top: 15px;
+  }
+
+  .valider:hover {
+    background-color: #ffffff65;
+  }
+
+  .containerFilter {
+    margin-left: 30vw;
+    margin-top: 22vh;
+    width: 60%;
+    height: 7vh;
+    overflow-y: scroll;
+    position: absolute;
+    border-radius: 50px;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+  }
+
+
+  
+
+
+
+  input[type="range"] { 
+    margin: auto;
+    -webkit-appearance: none;
+    position: relative;
+    overflow: hidden;
+    height: 10px;
+    width: 200px;
+    cursor: pointer;
+    border-radius: 25px; /* iOS */
+    border: solid rgba(255, 255, 255, 0.411) 1px;
+    background-color: transparent;
+}
+
+::-webkit-slider-runnable-track {
+    background: transparent;
+}
+
+/*
+ * 1. Set to 0 width and remove border for a slider without a thumb
+ * 2. Shadow is negative the full width of the input and has a spread 
+ *    of the width of the input.
+ */
+::-webkit-slider-thumb {
+
+    width: 20px; /* 1 */
+    height: 40px;
+    background: #fff;
+    box-shadow: -200px 0 0 200px rgba(255, 255, 255, 0.411); /* 2 */
+    border: 2px solid #999; /* 1 */
+    
+}
+
+::-moz-range-track {
+    height: 40px;
+    background: #fff;
+}
+
+::-moz-range-thumb {
+    background: #fff;
+    height: 40px;
+    width: 5px; /* 1 */
+    border: 3px solid #999; /* 1 */
+
+    box-shadow: -200px 0 0 200px none;
+    box-sizing: border-box;
+}
+
+::-ms-fill-lower { 
+    background: #fff;
+}
+
+::-ms-thumb { 
+    background: #fff;
+    border: 2px solid #999; /* 1 */
+    height: 40px;
+    width: 5px; /* 1 */
+    box-sizing: border-box;
+}
+
+::-ms-ticks-after { 
+    display: none; 
+}
+
+::-ms-ticks-before { 
+    display: none; 
+}
+
+::-ms-track { 
+    background: #fff;
+    color: transparent;
+    height: 40px;
+    border: none;
+}
+
+::-ms-tooltip { 
+    display: none;
+}
+
+select {
+    border: none;
+    border-radius: 25px;
+    margin: 0 15px;
+}

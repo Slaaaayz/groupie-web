@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Symphony Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.8" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div style="display: none;">
+        <div id="artistData">
+            <div id="artistName" data-value="{{ .Name }}"></div>
+            <div id="idArtist" data-value="{{ .Id }}"></div>
+            <div id="artistImage" data-value="{{ .Image }}"></div>
+        </div>
+    </div>
+    <div class="sideNav">
+        <br><br>
+        <div class="containerNavLogo">
+            <img src="../assets/img/image 9.png" alt="logo">
+        </div>
+        <div class="containerNavText">
+            <a class="textNav" class="firstText" href="/accueil">Accueil</a>
+            <a class="textNav" href="/search">Rechercher</a>
+            <a class="textNav" href="/billboard">Billboard</a>
+            <a style="margin-top: 20%;" class="textNav" href="/game">Play</a>
+            <a class="settings" href="/settings"><i style="font-size: 40px;" class="material-icons roue">settings</i></a>
+        </div>
+        <div class="containerNavFooter">
+            <p>Symphony © 2024</p>
+        </div>
+    </div>
+
+    <div class="containerCards3" >
+        <div class="titlePlayGame">QUI EST-CE ?</div>
+        <div class="chrono">
+            00:00
+        </div>
+        <div class="containerIndice">
+            <div class="titleIndice">
+                INDICE
+            </div>
+            <div class="textIndice">
+                <p id="premAlbum"> Date du premier album : {{ .FirstAlbum }}</p>
+                <p id="creaDate">Date de lancement : {{ .CreationDate}}</p>
+               <img id="imgArtiste" src="{{ .Image }}" alt="">
+            </div>
+        </div>
+        <div class="guess">
+            <div class="searchbarContainerGame">
+                <div class="serchbar">
+                    <div class="searchbarTextGame">
+                        <div action="/search">
+                            <input class="input2" type='text' id="artist-search" name="q" placeholder='Qui est-ce ?' autocomplete="off">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="valider">Valider</button>
+        </div>
+
+    </div>
+    <script src="/assets/wallpaper.js"></script>
+    <script src="/assets/game.js"></script>
+</body>

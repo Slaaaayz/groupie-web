@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultat du Jeu</title>
+    <title>Symphony Resultat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        img {
+            max-width: 120px;
+            height: auto;
+            margin-top: 5px;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+<body>
+    <script src="../assets/wallpaper.js"></script>
+    <div class="sideNav">
+        <br><br>
+        <div class="containerNavLogo">
+            <img src="../assets/img/image 9.png" alt="logo">
+        </div>
+        <div class="containerNavText">
+            <a class="textNav firstText" href="/accueil">Accueil</a>
+            <a class="textNav" href="/search">Rechercher</a>
+            <a class="textNav" href="/concerts">Concerts</a>
+            <a style="margin-top: 20%;" class="textNav" href="/game">Play</a>
+            <a class="settings" href="/settings"><i style="font-size: 40px;" class="material-icons roue">settings</i></a>
+        </div>
+        <div class="containerNavFooter">
+            <p>Symphony © 2024</p>
+        </div>
+    </div>
+
+    <div class="containerCards3">
+        <div class="titlePlayGame">Résultat</div>
+        <div class="containerRes">
+            <h1 id="gameResult" class="gameResult"></h1>
+            <img id="artistImage" src="" alt="Image de l'artiste">
+            <p class="answer">La réponse était <strong id="artistName"></strong></p>
+            <a class="artistId" id="artistLink" href="/artist/">Page Artiste</a><br>
+        </div>
+        <a class="artistId2" href="/game">Rejouer</a><br>
+    </div>
+
+    <h1 id="gameResult"></h1>
+    <p>La réponse était <strong id="artistName"></strong></p>
+    <p>ID de l'artiste: <span id="artistId"></span></p>
+    <img id="artistImage" src="" alt="Image de l'artiste">
+
+    <script>
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+    
+        const result = getQueryParam('result');
+        const name = decodeURIComponent(getQueryParam('name'));
+        const idArtist = decodeURIComponent(getQueryParam('idArtist'));
+        const image = decodeURIComponent(getQueryParam('image'));
+    
+        document.getElementById('gameResult').textContent = result === 'win' ? 'Bravo!' : 'Dommage...';
+        document.getElementById('artistName').textContent = name;
+        const imgElement = document.getElementById('artistImage');
+        if (image) {
+            imgElement.src = image;
+            imgElement.alt = `Image de ${name}`;
+        } else {
+            imgElement.style.display = 'none';
+        }
+
+        document.getElementById('artistLink').href = `/artist/${idArtist}`;
+    </script>
+    
+</body>
+</html>

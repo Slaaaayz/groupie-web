@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Symphony Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.8" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <script src="../assets/wallpaper.js"></script>
+    <div class="sideNav">
+        <br><br>
+        <div class="containerNavLogo">
+            <img src="../assets/img/image 9.png" alt="logo">
+        </div>
+        <div class="containerNavText">
+            <a class="textNav" class="firstText" href="/accueil">Accueil</a>
+            <a class="textNav" href="/search">Rechercher</a>
+            <a class="textNav" href="/billboard">Billboard</a>
+            <a style="margin-top: 20%;" class="textNav" href="/game">Play</a>
+            <a class="settings" href="/settings"><i style="font-size: 40px;" class="material-icons roue">settings</i></a>
+        </div>
+        <div class="containerNavFooter">
+            <p>Symphony © 2024</p>
+        </div>
+    </div>
+
+    <form class="searchbarContainer">
+        <div class="serchbar">
+            <div class="searchbarText">
+            <form action="/search">
+                <input class="input1" type='text' id="artist-search" name="q" placeholder='Recherchez une musique, un artiste ici :' autocomplete="off"></input> <input class="loupe" type="image" value="Submit" src="../assets/img/loupe.png"></input>
+            </form>
+            </div>
+        </div>
+    </form>
+
+    <div class="containerFilter">
+        <label for="Tri">Trier :</label>
+        <select id="tri" name="tri">
+            <option value="true">A - Z</option>
+            <option value="false">Z - A</option>
+        </select>
+        <label for="TriMembers">Par nombre de membres :</label>
+        <select id="triNB" name="triNB">
+            <option value="0">Pas de tri</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+        <div class="slidecontainer">
+            <input type="range" min="1958" max="2015" value="1958" class="slider cursor" id="range">
+            <input type="range" min="1958" max="2015" value="2015" class="slider2 cursor" id="range2">
+        </div>  
+    </div>
+
+    <div class="containerCards2">    
+        <div class="cardsTitle">
+            Résultat pour "<span class="queryValue"></span>"
+        </div>
+        <p>Année de création: <span class="date1"></span> - <span class="date2"></span></p>
+        <div class="cardsList">
+            {{range .}}
+            <div class="cards">
+                <div class="cardsImg">
+                    <a href="/artist/{{.Id}}"><img src="{{.Image}}" alt=""></a>
+                    
+                </div>
+                <div class="cardsElementTitle">
+                    <a href="/artist/{{.Id}}" class="name" value="{{.Name}}">{{.Name}}</a>
+                </div>
+
+                <input type="hidden" class="member" value="{{.Members}}">
+                <input type="hidden" class="date" value="{{.CreationDate}}">
+                <input type="hidden" class="album" value="{{.FirstAlbum}}">
+                <input type="hidden" class="NBmembers" value="{{len .Members}}">
+            </div>
+            {{end}}
+        </div>
+    </div>
+    <script src="/assets/searchbar.js" defer></script>
+</body>
+</html>

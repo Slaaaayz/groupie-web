@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Symphony Accueil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.8" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preload" as="image" href="../assets/img/wp1.webp"/>
+    <link rel="preload" as="image" href="../assets/img/wp2.webp"/>
+    <link rel="preload" as="image" href="../assets/img/wp3.webp"/>
+    <link rel="preload" as="image" href="../assets/img/wp4.webp"/>
+    <link rel="preload" as="image" href="../assets/img/wp5.webp"/>
+    <link rel="preload" as="image" href="../assets/img/wp6.webp"/>
+</head>
+<body>
+    
+    <script src="/assets/wallpaper.js"></script>
+    <div class="sideNav">
+        <br><br>
+        <div class="containerNavLogo">
+            <img src="../assets/img/image 9.png" alt="logo">
+        </div>
+        <div class="containerNavText">
+            <a class="textNav" class="firstText" href="/accueil">Accueil</a>
+            <a class="textNav" href="/search">Rechercher</a>
+            <a class="textNav" href="/billboard">Billboard</a>
+            <a style="margin-top: 20%;" class="textNav" href="/game">Play</a>
+            <a class="settings" href="/settings"><i style="font-size: 40px;" class="material-icons roue">settings</i></a>
+        </div>
+        <div class="containerNavFooter">
+            <p>Symphony © 2024</p>
+        </div>
+    </div>
+
+    <form class="searchbarContainer" action="/search">
+        <div class="serchbar">
+            <div class="searchbarText">
+                <form action="/search">
+                    <input class="input1" type='text' id="artist-search" name="q" placeholder='Recherchez une musique, un artiste ici :' autocomplete="off"></input> <input class="loupe" type="image" value="Submit" src="../assets/img/loupe.png"></input>
+                </form>
+            </div>
+        </div>
+    </form>
+    <div class="containerCards">
+        <div class="cardsTitle">
+            Artistes à découvrir
+        </div>
+        
+        <div class="cardsList">
+            {{range .}}
+            <div class="cards">
+                <div class="cardsImg">
+                    <a href="/artist/{{.Id}}"><img src="{{.Image}}" alt=""></a>
+                    
+                </div>
+                <div class="cardsElementTitle">
+                    <a href="/artist/{{.Id}}">{{.Name}}</a>
+                </div>
+            </div>
+            {{end}}
+        </div>
+    </div>
+</body>
+</html>
