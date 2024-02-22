@@ -72,6 +72,10 @@ a:link {color: rgba(255, 255, 255, 0.80);}a:visited {color: rgba(255, 255, 255, 
 background-color: rgba(255,255,255,0.17); 
 }
 
+.actuel {
+    background-color: rgba(255, 255, 255, 0.338) !important; 
+}
+
 .containerNavText .settings .roue{
     bottom: 0;
     margin-top: 11vh;
